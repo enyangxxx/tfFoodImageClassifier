@@ -33,7 +33,7 @@ In this project, I learned to use TensorFlow to build an Deep Neural Network and
 ### Training result
 The costs after each 100th epoch are the following:
 
-<img src="https://github.com/enyangxxx/tfFoodImageClassifier/blob/master/gitImg/costs.jpg" width="200" height="350">
+<img src="https://github.com/enyangxxx/tfFoodImageClassifier/blob/master/gitImg/costs.jpg" width="250" height="350">
 
 They were also plotted in a learning graph, together with the training, cross-validation and test accuracies:
 
