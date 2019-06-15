@@ -44,14 +44,8 @@ This reveals an effect of overfitting, because the model fits the training set v
 ## Test result
 This is my first time ever showing the test result with single test images.. I am very very proud to achieve this result although I know that the model can still be improved. But my goal is definitely achieved and a big thanks to Andrew Ng, deeplearning.ai and Coursera for teaching me how to develop my own Deep Learning project.
 
-<p float="left">
-  <img src="https://github.com/enyangxxx/tfFoodImageClassifier/blob/master/gitImg/food1.jpg" width="200" height="200">
-  <img src="https://github.com/enyangxxx/tfFoodImageClassifier/blob/master/gitImg/food2.jpg" width="200" height="200">
-  <img src="https://github.com/enyangxxx/tfFoodImageClassifier/blob/master/gitImg/nonfood.jpg" width="200" height="200">
+<p float="center">
+  <img src="https://github.com/enyangxxx/tfFoodImageClassifier/blob/master/gitImg/food1.jpg" width="300" height="300">
+  <img src="https://github.com/enyangxxx/tfFoodImageClassifier/blob/master/gitImg/food2.jpg" width="300" height="300">
+  <img src="https://github.com/enyangxxx/tfFoodImageClassifier/blob/master/gitImg/nonfood.jpg" width="300" height="300">
 </p>
-
-<img src="https://github.com/enyangxxx/tfFoodImageClassifier/blob/master/gitImg/food1.jpg" width="200" height="200">
-
-<img src="https://github.com/enyangxxx/tfFoodImageClassifier/blob/master/gitImg/food2.jpg" width="200" height="200">
-
-<img src="https://github.com/enyangxxx/tfFoodImageClassifier/blob/master/gitImg/nonfood.jpg" width="200" height="200">
