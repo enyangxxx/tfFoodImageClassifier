@@ -38,33 +38,23 @@ def model(X_train, Y_train, X_test, Y_test, X_vali, Y_vali, units_per_layer, lea
     tf.set_random_seed(1)                             # to keep consistent results
     seed = 3                                          # to keep consistent results
     (n_x, m) = X_train.shape                          # (n_x: input size, m : number of examples in the train set)
-    n_y = Y_train.shape[0]                                  # n_y : output size
+    n_y = Y_train.shape[0]                            # n_y : output size
     costs = []                                        # To keep track of the cost
     
     # Create Placeholders of shape (n_x, n_y)
-    ### START CODE HERE ### (1 line)
     X, Y = tFunc.create_placeholders(n_x, n_y)
-    ### END CODE HERE ###
 
     # Initialize parameters
-    ### START CODE HERE ### (1 line)
     parameters = tFunc.initialize_parameters(units_per_layer)
-    ### END CODE HERE ###
     
     # Forward propagation: Build the forward propagation in the tensorflow graph
-    ### START CODE HERE ### (1 line)
     z3 = tFunc.forward_propagation(X, parameters, units_per_layer)
-    ### END CODE HERE ###
     
     # Cost function: Add cost function to tensorflow graph
-    ### START CODE HERE ### (1 line)
     cost = tFunc.compute_cost(z3, Y)
-    ### END CODE HERE ###
     
     # Backpropagation: Define the tensorflow optimizer. Use an AdamOptimizer.
-    ### START CODE HERE ### (1 line)
     optimizer = tf.train.AdamOptimizer(learning_rate = learning_rate).minimize(cost)
-    ### END CODE HERE ###
     
     # Initialize all the variables
     init = tf.global_variables_initializer()
@@ -90,9 +80,7 @@ def model(X_train, Y_train, X_test, Y_test, X_vali, Y_vali, units_per_layer, lea
                 
                 # IMPORTANT: The line that runs the graph on a minibatch.
                 # Run the session to execute the optimizer and the cost, the feedict should contain a minibatch for (X,Y).
-                ### START CODE HERE ### (1 line)
                 _ , temp_cost = sess.run([optimizer, cost], feed_dict={X: minibatch_X, Y: minibatch_Y})
-                ### END CODE HERE ###
                 
                 minibatch_cost += temp_cost / num_minibatches
 
@@ -114,9 +102,16 @@ def model(X_train, Y_train, X_test, Y_test, X_vali, Y_vali, units_per_layer, lea
         print ("Parameters have been trained!")
 
         # Calculate the correct predictions
+        # tf.argmax(z3) returns an array with the indexes of the biggest value within z3 tensor
+        # Y is one-hot encoded, so it has one 1 and all other are zero. 
+        # pred represents probabilities of classes. 
+        # So argmax finds the positions of best prediction and correct value. 
+        # After that you check whether they are the same.
+        # tf.equal returns a 1D array with 0's and 1's
         correct_prediction = tf.equal(tf.argmax(z3), tf.argmax(Y))
 
         # Calculate accuracy on the test set
+        # By computing the mean of elements across dimensions of a tensor.
         accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
 
         print ("Train Accuracy:", accuracy.eval({X: X_train, Y: Y_train}))
