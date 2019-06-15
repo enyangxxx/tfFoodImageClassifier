@@ -44,6 +44,8 @@ This reveals an effect of overfitting, because the model fits the training set v
 ## Test result
 This is my first time ever showing the test result with single test images.. I am very very proud to achieve this result although I know that the model can still be improved. But my goal is definitely achieved and a big thanks to Andrew Ng, deeplearning.ai and Coursera for teaching me how to develop my own Deep Learning project.
 
+![Food1](https://github.com/enyangxxx/tfFoodImageClassifier/blob/master/gitImg/food1.jpg "Food1") ![Food2](https://github.com/enyangxxx/tfFoodImageClassifier/blob/master/gitImg/food2.jpg "Food2")
+
 <img src="https://github.com/enyangxxx/tfFoodImageClassifier/blob/master/gitImg/food1.jpg" width="200" height="200">
 
 <img src="https://github.com/enyangxxx/tfFoodImageClassifier/blob/master/gitImg/food2.jpg" width="200" height="200">
