@@ -39,7 +39,7 @@ They were also plotted in a learning graph, together with the training, cross-va
 
 <img src="https://github.com/enyangxxx/tfFoodImageClassifier/blob/master/gitImg/learningcurveAndAccuracies.jpg" width="500" height="400">
 
-This reveals an effect of overfitting, because the model fits the training set very well, but less to the cross-validation set due to small size of dataset overall. A possible solution could be data augmentation to enlarge the dataset. 
+This reveals an effect of overfitting, because the model fits the training set very well, but less to the cross-validation set due to small size of dataset overall. A possible solution could be data augmentation to enlarge the dataset or regularization. 
 
 ## Test result
 This is my first time ever showing the test result with single test images.. I am very very proud to achieve this result although I know that the model can still be improved. But my goal is definitely achieved and a big thanks to Andrew Ng, deeplearning.ai and Coursera for teaching me how to develop my own Deep Learning project.
@@ -50,3 +50,6 @@ P.S. I used openCV, so BGR is used per default instead of RGB, hopefully that is
   <img src="https://github.com/enyangxxx/tfFoodImageClassifier/blob/master/gitImg/food2.jpg" width="300" height="300">
   <img src="https://github.com/enyangxxx/tfFoodImageClassifier/blob/master/gitImg/nonfood.jpg" width="330" height="300">
 </p>
+
+## Next steps
+The next step would be implementation of regularization to reduce variance. What I also want to try is the data augmentation. The goal is to achieve reduction of variance to increase accuracy for dev set.
